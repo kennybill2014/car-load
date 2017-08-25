@@ -334,23 +334,23 @@
     </style>
 </body>
 </html>
-<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
+<script src="int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>
 <script>
-        $.ajax({
-        type: "get",
-        url: "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js",
-        async:false,
-        dataType:"script",
-        cache:false,
-        success: succFunction
-    });
-    function succFunction(data) {
-        (function () {
-            alert(remote_ip_info['city'])
-        })()
+//         $.ajax({
+//         type: "get",
+//         url: "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js",
+//         async:false,
+//         dataType:"script",
+//         cache:false,
+//         success: succFunction
+//     });
+//     function succFunction(data) {
+//         (function () {
+//             alert(remote_ip_info['city'])
+//         })()
 
-    }
-    //var city = remote_ip_info['city'];
-    //$("title").html(city);
-    //alert("您当前所在城市："+city)
+//     }
+    var city = remote_ip_info['city'];
+    $("title").html(city);
+    alert("您当前所在城市："+city)
 </script>
