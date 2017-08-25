@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html style="background: #fff;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>评估报告</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/font-s.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/public.js"></script>
+</head>
+<body style="background: #fff;">
+<div class="loading">
+    <span></span>
+</div>
+    <header>
+        <span onclick="window.location.href='index-h5.html'" class="go-back c-a4a4d"><em class="goBack"></em>返回首页</span>
+        评估报告
+        <span></span>
+    </header>
+    <section id="main">
+        <div class="appWarp">
+            <div class="assessment-report">
+                <span class="icon-assessment-report fl"></span>
+                <p class="green fz34 fw-b">信息提交成功！</p>
+                <p class="fz28">我们已经收到您的申请信息，稍后贷款顾问将于您联系</p>
+            </div>
+            <div class="evaluation-info">
+                <div class="fz28 pl20 mt30">君威2011款2.0L  舒适版</div>
+                <div class="fz24 pl20 mt15">
+                    <span>2011年1月</span><em class="line mlr24"></em><span>4万公里</span><em class="line mlr24"></em><span>北京</span>
+                </div>
+                <div class="assessed-valuation">
+                    <div class="warp-box">
+                        <p>
+                            <span class="c-666"><em class="fz80">9.36</em><em class="fz28">万</em></span>
+                        </p>
+                        <span class="fz24">车辆估值</span>
+                    </div>
+                    <div class="warp-box">
+                        <p>
+                            <span><em class="fz80 c-a4a4d">9.36</em><em class="fz28">万</em></span>
+                        </p>
+                        <span class="fz24">惠车联动可贷额度</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="lower-box">
+                <p class="ta-l fz24 pt15 pl20">本结果仅供参考，实际金额以线下真实额度为准</p>
+                <p id="down-load" class="btn-assessment bnt-sty2">下载惠车联动APP</p>
+                <p class="fz28 mt48">下载惠车联动APP，可优先放款，在线查询贷款进度。</p>
+                <p class="fz28 c-a4a4d text-d-u mt25" onclick="window.location.href='tel:400-611-7717'">咨询热线：400-611-7717</p>
+                <p class="fz28 mt20">（工作时间：周一至周五9.00点~18.00点）</p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+<script type="text/javascript">
+    var bbb= document.getElementById("down-load");
+    bbb.addEventListener("click",
+        function () {
+            var u = navigator.userAgent;
+            if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+//                alert("安卓手机");
+                window.location.href = "http://zhushou.360.cn/detail/index/soft_id/3868131?recrefer=SE_D_%E6%83%A0%E8%BD%A6%E8%81%94%E5%8A%A8";
+            } else if (u.indexOf('iPhone') > -1) {//苹果手机
+                window.location.href = "https://itunes.apple.com/cn/app/%E6%83%A0%E8%BD%A6%E8%81%94%E5%8A%A8/id1255058049?mt=8";
+//                alert("苹果手机");
+            } else if (u.indexOf('Windows Phone') > -1) {//winphone手机
+//                alert("winphone手机");
+                window.location.href = "http://zhushou.360.cn/detail/index/soft_id/3868131?recrefer=SE_D_%E6%83%A0%E8%BD%A6%E8%81%94%E5%8A%A8";
+            }
+        }
+    )
+</script>
+<!--百度统计-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8a486409a91b5060b21b44477b461651";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</html>

@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html style="background: #fff;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>补充信息</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css?version=1.1.1">
+    <script type="text/javascript" src="js/font-s.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/datePicker.js"></script>
+    <style type="text/css">
+        .select-info li:first-child:after {
+            content: "";
+        }
+    </style>
+</head>
+<body>
+<div class="loading">
+    <span></span>
+</div>
+    <header>
+        <span onclick="javascript:history.back(-1);" class="go-back"><em class="goBack"></em>返回</span>
+        车辆评估
+        <span></span>
+    </header>
+    <section id="main">
+        <div class="appWarp">
+            <div class="select-info-top">
+                <h4>补充以下车辆信息可快速贷款</h4>
+                <ul class="select-ul clearfix">
+                    <li class="ml0"> <span class="icon-select"></span>提高审批速度</li>
+                    <li><span class="icon-select"></span>提高成功率</li>
+                    <li><span class="icon-select"></span>免费获取评估报告</li>
+                </ul>
+            </div>
+
+            <ul class="select-info">
+                <li id="car-model">品牌车型<span id="selectBr" class="brand-text mr50"></span></li>
+                <li class="after-no">车牌号<input placeholder="请输入" style="text-transform: uppercase;"></li>
+                <li class="after-no">首次上牌时间<input style="width: 5rem;" id="timerSelect" readonly type="text"  placeholder="年/月/日"></li>
+                <li>车辆所在地 <a id="sel_city" class="brand-text mr50">请输入</a></li>
+                <li class="after-no">行程里程<span class="brand-text" style="width: auto;">万公里</span><input id="numLoad" maxlength="4" onkeyup="limitInput(this);" placeholder=""></li>
+                <!--<li>-->
+                    <!--<input type=text name= caolig value ="" onblur="if (!(/^[\d]+\.?\d*$/.test(this.value)) ){alert('您的输入有误'); this.value='';this.focus();}">-->
+                    <!---->
+                <!--</li>-->
+
+            </ul>
+            <p class="btn-assessment bnt-sty2" onclick="window.location.href='assessment-report.html'">立即评估</p>
+        </div>
+        <!-- HTML代码片段中请勿添加<body>标签 //-->
+        <div id="container" style="display: none;">
+            <div class="simu-brand">
+                <dl class="brand-dl fl">
+                    <dt><a id="tgida">A</a></dt>
+                    <dd><a href="#">A 奥迪</a></dd>
+                    <dd><a href="#">A 阿斯顿马丁</a></dd>
+                    <dd><a href="#">A 安驰</a></dd>
+                    <dd><a href="#">A 阿尔法罗密欧</a></dd>
+                    <dt><a id="tgidb">B</a></dt>
+                    <dd><a href="#">B 宝马</a></dd>
+                    <dd><a href="#">B 宝骏</a></dd>
+                    <dd><a href="#">B 别克</a></dd>
+                    <dd><a href="#">B 本田</a></dd>
+                    <dt><a id="tgidc">C</a></dt>
+                    <dd><a href="#">C 宝马</a></dd>
+                    <dd><a href="#">C 宝骏</a></dd>
+                    <dd><a href="#">C 别克</a></dd>
+                    <dd><a href="#">C 本田</a></dd>
+                    <dd><a href="#">C 宝马</a></dd>
+                    <dd><a href="#">C 宝骏</a></dd>
+                    <dd><a href="#">C 别克</a></dd>
+                    <dd><a href="#">C 本田</a></dd>
+                    <dd><a href="#">C 宝马</a></dd>
+                    <dd><a href="#">C 宝骏</a></dd>
+                    <dd><a href="#">C 别克</a></dd>
+                    <dd><a href="#">C 本田</a></dd>
+                    <dt><a id="tgidd">D</a></dt>
+                    <dd><a href="#">D 宝马</a></dd>
+                    <dd><a href="#">D 宝骏</a></dd>
+                    <dd><a href="#">D 别克</a></dd>
+                    <dd><a href="#">D 本田</a></dd>
+                    <dd><a href="#">D 宝马</a></dd>
+                    <dd><a href="#">D 宝骏</a></dd>
+                    <dd><a href="#">D 别克</a></dd>
+                    <dd><a href="#">D 本田</a></dd>
+                    <dd><a href="#">D 宝马</a></dd>
+                    <dd><a href="#">D 宝骏</a></dd>
+                    <dd><a href="#">D 别克</a></dd>
+                    <dd><a href="#">D 本田</a></dd>
+                </dl>
+                <div class="letter-abc fl">
+                    <a id="ida">A</a>
+                    <a id="idb">B</a>
+                    <a id="idc">C</a>
+                    <a id="idd">D</a>
+                    <a id="ide">E</a>
+                    <a href="#">F</a>
+                    <a href="#">G</a>
+                    <a href="#">H</a>
+                    <a href="#">I</a>
+                    <a href="#">J</a>
+                    <a href="#">K</a>
+                    <a href="#">L</a>
+                    <a href="#">M</a>
+                    <a href="#">N</a>
+                    <a href="#">O</a>
+                    <a href="#">P</a>
+                    <a href="#">Q</a>
+                    <a href="#">R</a>
+                    <a href="#">S</a>
+                    <a href="#">T</a>
+                    <a href="#">U</a>
+                    <a href="#">V</a>
+                    <a href="#">W</a>
+                    <a href="#">X</a>
+                    <a href="#">Y</a>
+                    <a href="#">Z</a>
+                </div>
+                <div class="pop-one">
+                    <h4 class="title-top">
+                        <b class="fl"><</b>
+                        <span>选择车系</span>
+                    </h4>
+                    <h3>通用别克</h3>
+                    <ul>
+                        <li>别克君越</li>
+                        <li>别克君越</li>
+                        <li>别克君越</li>
+                        <li>别克君越</li>
+                        <li>别克君越</li>
+                    </ul>
+                </div>
+
+                <div class="pop-two">
+                    <h4 class="title-top">
+                        <b class="fl"><</b>
+                        <span>选择车型</span>
+                    </h4>
+                    <h3>2017</h3>
+                    <ul>
+                        <li>1.5T 20T 豪华型</li>
+                        <li>1.8L 30H 豪华型</li>
+                    </ul>
+                    <h3>2013</h3>
+                    <ul>
+                        <li>1.5T 20T <span>自动</span>豪华型</li>
+                        <li>1.8L 30H <span>手动</span>豪华型</li>
+                        <li>1.8T 20T <span>自动</span>豪华型</li>
+                        <li>2.4L 30H <span>手动</span>豪华型</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="js/public.js">
+            /*Javascript代码片段*/
+        </script>
+        <script type="text/javascript">
+            function limitInput(o){
+                var value=o.value;
+                var min=1;
+                var max=20;
+                if(parseFloat(value)<min||parseFloat(value)>max){
+                    alert('请输入0-20的数值');
+//                o.value=this.val();
+                }
+                var ret = /^[\d]+\.?\d*$/;
+                if(ret.test(value)){
+
+                }else{
+                    alert('wrong');
+                }
+            }
+        </script>
+
+        <script>
+            $(".brand-dl dd").click(function () {
+                $(".pop-one ").addClass("in");
+                $(this).addClass("active").siblings().removeClass("active");
+            })
+            $(".pop-one ul li").click(function () {
+                $(".pop-two ").addClass("in");
+            })
+            $(".pop-two ul li").click(function () {
+                $("#container").css("display","none");
+                var selectText = $(this).text();
+                $("#selectBr").html(selectText)
+            })
+            $(".title-top").click(function () {
+                $(this).parent().removeClass("in")
+
+            })
+        </script>
+    </section>
+    <!--<input id="demo1" value="233434343">-->
+    <!--时间日期-->
+
+    <script>
+        var calendar = new datePicker();
+        var maxData=(function () {
+
+            var mydate = new Date();
+
+            var str = "" + mydate.getFullYear() + "-";
+
+            str += (mydate.getMonth()+1);
+
+            return str
+
+        })();
+
+        var minData=(function () {
+
+            var mydate = new Date();
+
+            var str = "" + mydate.getFullYear()-16 + "-";
+
+            str += (mydate.getMonth()+1);
+
+            return str
+
+        })();
+        calendar.init({
+            'trigger': '#timerSelect', /*按钮选择器，用于触发弹出插件*/
+            'type': 'ym',/*模式：date日期；datetime日期时间；time时间；ym年月；*/
+            'minDate':minData,/*最小日期*/
+            'maxDate':maxData,/*最大日期*/
+            'onSubmit':function(){/*确认时触发事件*/
+                var theSelectData=calendar.value;
+            },
+            'onClose':function(){/*取消时触发事件*/
+            }
+        });
+    </script>
+    <!--地址选择-->
+    <script src="js/picker.min.js"></script>
+    <script src="js/ccity.js"></script>
+    <script>
+        var nameEl = document.getElementById('sel_city');
+
+        var first = []; /* 省，直辖市 */
+        var second = []; /* 市 */
+        var third = []; /* 镇 *///
+
+        var selectedIndex = [0, 0, 0]; /* 默认选中的地区 */
+
+        var checked = [0, 0, 0]; /* 已选选项 */
+        function creatList(obj, list){
+            obj.forEach(function(item, index, arr){
+                var temp = new Object();
+                temp.text = item.name;
+                temp.value = index;
+                temp.textId = item.areaId;
+                list.push(temp);
+//                console.log(temp.text2)
+            })
+        }
+        creatList(city, first);
+        console.dir($("#sel_city"));
+        if (city[selectedIndex[0]].hasOwnProperty('sub')) {
+            creatList(city[selectedIndex[0]].sub, second);
+        } else {
+            second = [{text: '', value: 0}];
+        }
+
+        if (city[selectedIndex[0]].sub[selectedIndex[1]].hasOwnProperty('sub')) {
+            creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
+        } else {
+            third = [{text: '', value: 0}];
+        }
+        var picker = new Picker({
+            data: [first, second, third],
+            selectedIndex: selectedIndex,
+            title: '地址选择'
+        });
+
+        picker.on('picker.select', function (selectedVal, selectedIndex) {
+            var text1 = first[selectedIndex[0]].text;
+            var text2 = second[selectedIndex[1]].text;
+            var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
+
+            var text5 = first[selectedIndex[0]].textId;
+            var text6 = second[selectedIndex[1]].textId;
+
+            nameEl.innerText = text1 + ' ' + text2 + ' ' + text3;
+
+            nameEl.cityOneList = text5;
+            nameEl.cityTwoList = text6;
+            console.log( "城市一级"+nameEl.cityOneList)
+            console.log( "城市二级"+nameEl.cityTwoList)
+            console.log($("#sel_city")[0].cityOneList)
+            console.log($("#sel_city")[0].cityTwoList)
+        });
+
+        picker.on('picker.change', function (index, selectedIndex) {
+            if (index === 0){
+                firstChange();
+            } else if (index === 1) {
+                secondChange();
+            }
+
+            function firstChange() {
+                second = [];
+                third = [];
+                checked[0] = selectedIndex;
+                var firstCity = city[selectedIndex];
+                if (firstCity.hasOwnProperty('sub')) {
+                    creatList(firstCity.sub, second);
+
+                    var secondCity = city[selectedIndex].sub[0]
+                    if (secondCity.hasOwnProperty('sub')) {
+                        creatList(secondCity.sub, third);
+                    } else {
+                        third = [{text: '', value: 0}];
+                        checked[2] = 0;
+                    }
+                } else {
+                    second = [{text: '', value: 0}];
+                    third = [{text: '', value: 0}];
+                    checked[1] = 0;
+                    checked[2] = 0;
+                }
+
+                picker.refillColumn(1, second);
+                picker.refillColumn(2, third);
+                picker.scrollColumn(1, 0)
+                picker.scrollColumn(2, 0)
+            }
+
+            function secondChange() {
+                third = [];
+                checked[1] = selectedIndex;
+                var first_index = checked[0];
+                if (city[first_index].sub[selectedIndex].hasOwnProperty('sub')) {
+                    var secondCity = city[first_index].sub[selectedIndex];
+                    creatList(secondCity.sub, third);
+                    picker.refillColumn(2, third);
+                    picker.scrollColumn(2, 0)
+                } else {
+                    third = [{text: '', value: 0}];
+                    checked[2] = 0;
+                    picker.refillColumn(2, third);
+                    picker.scrollColumn(2, 0)
+                }
+            }
+
+        });
+        picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
+            console.log(selectedVal);
+            console.log(selectedIndex);
+        });
+        nameEl.addEventListener('click', function () {
+            picker.show();
+        });
+        var pickMask = document.querySelector(".picker-mask")
+//        console.log(pickMask)
+        pickMask.addEventListener('click', function () {
+            picker.hide();
+        });
+    </script>
+    <!--品牌选择-->
+    <!--百度统计-->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8a486409a91b5060b21b44477b461651";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</body>
+</html>
