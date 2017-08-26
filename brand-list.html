@@ -20,14 +20,16 @@
     </style>
 </head>
 <body>
-<div class="loading">
-    <span></span>
-</div>
+    <div class="loading">
+        <span></span>
+    </div>
+    <div class="shade"></div>
     <header>
         <span onclick="javascript:history.back(-1);" class="go-back"><em class="goBack"></em>返回</span>
         车辆评估
         <span></span>
     </header>
+
     <section id="main">
         <div class="appWarp">
             <div class="select-info-top">
@@ -41,7 +43,7 @@
 
             <ul class="select-info">
                 <li id="car-model">品牌车型<span id="selectBr" class="brand-text mr50"></span></li>
-                <li class="after-no">车牌号<input placeholder="请输入" style="text-transform: uppercase;"></li>
+                <li class="after-no">车牌号<input placeholder="请输入" style="text-transform: uppercase; width: 2rem;"><a id="sel_pro" style="float: right;width: 1rem; text-align: center;"><em>京</em><span class="select-down"></span></a></li>
                 <li class="after-no">首次上牌时间<input style="width: 5rem;" id="timerSelect" readonly type="text"  placeholder="年/月/日"></li>
                 <li>车辆所在地 <a id="sel_city" class="brand-text mr50">请输入</a></li>
                 <li class="after-no">行程里程<span class="brand-text" style="width: auto;">万公里</span><input id="numLoad" maxlength="4" onkeyup="limitInput(this);" placeholder=""></li>
@@ -49,8 +51,45 @@
                     <!--<input type=text name= caolig value ="" onblur="if (!(/^[\d]+\.?\d*$/.test(this.value)) ){alert('您的输入有误'); this.value='';this.focus();}">-->
                     <!---->
                 <!--</li>-->
-
             </ul>
+            <div class="pop-car-city">
+                <h3 class="clearfix">
+                    <span class="btn-confirm fr">确定</span>
+                </h3>
+                <ul class="clearfix">
+                    <li class="c-fa8919">京</li>
+                    <li>鲁</li>
+                    <li>津</li>
+                    <li>沪</li>
+                    <li>川</li>
+                    <li>鄂</li>
+                    <li>甘</li>
+                    <li>赣</li>
+                    <li>贵</li>
+                    <li>桂</li>
+                    <li>黑</li>
+                    <li>吉</li>
+                    <li>冀</li>
+                    <li>晋</li>
+                    <li>辽</li>
+                    <li>蒙</li>
+                    <li>闽</li>
+                    <li>宁</li>
+                    <li>青</li>
+                    <li>琼</li>
+                    <li>陕</li>
+                    <li>苏</li>
+                    <li>皖</li>
+                    <li>湘</li>
+                    <li>新</li>
+                    <li>渝</li>
+                    <li>豫</li>
+                    <li>粤</li>
+                    <li>云</li>
+                    <li>浙</li>
+                    <li>藏</li>
+                </ul>
+            </div>
             <p class="btn-assessment bnt-sty2" onclick="window.location.href='assessment-report.html'">立即评估</p>
         </div>
         <!-- HTML代码片段中请勿添加<body>标签 //-->
@@ -177,7 +216,6 @@
                 }
             }
         </script>
-
         <script>
             $(".brand-dl dd").click(function () {
                 $(".pop-one ").addClass("in");
@@ -193,8 +231,28 @@
             })
             $(".title-top").click(function () {
                 $(this).parent().removeClass("in")
-
             })
+
+            //select btn
+            $("#sel_pro").on("click",function () {
+                $(".pop-car-city").addClass("in");
+                $(".shade").fadeIn();
+
+            });
+            $(".shade").on("click",function () {
+                $(".shade").fadeOut();
+                $(".pop-car-city").removeClass("in");
+            });
+            $(".btn-confirm").on("click",function () {
+                $(".shade").fadeOut();
+                $(".pop-car-city").removeClass("in");
+                $(".after-no:first").find("input").focus();
+            });
+            $(".pop-car-city ul li").on("click",function () {
+                var str = $(this).html();
+                $(this).addClass("c-fa8919").siblings().removeClass();
+                $("#sel_pro").find("em").html(str);
+            });
         </script>
     </section>
     <!--<input id="demo1" value="233434343">-->
@@ -303,7 +361,6 @@
             } else if (index === 1) {
                 secondChange();
             }
-
             function firstChange() {
                 second = [];
                 third = [];

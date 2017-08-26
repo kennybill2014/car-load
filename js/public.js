@@ -41,4 +41,24 @@ $(document).ready(function(e) {
             }
         })
     }
+    //动画
+    $(function(){
+//                    $('.top-banner-icon4').addClass('animated bounce');
+        setTimeout(function(){
+            $('.top-banner-icon').addClass('animated bounceInLeft');
+            $('.top-banner-icon').css("opacity","1")
+        }, 2000);
+        setTimeout(function(){
+            $('.top-banner-icon2').addClass('animated bounceInDown');
+            $('.top-banner-icon2').css("opacity","1")
+        }, 2500);
+        setTimeout(function(){
+            $('.top-banner-icon3').addClass('animated bounceInRight');
+            $('.top-banner-icon3').css("opacity","1")
+        }, 3000);
+        setTimeout(function(){
+            $('.top-banner-icon4').addClass('animated bounceInUp');
+            $('.top-banner-icon4').css("opacity","1")
+        }, 3500);
+    });
 });

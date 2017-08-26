@@ -8,22 +8,32 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no, email=no">
     <meta name="format-detection" content="telephone=yes"/>
-<!--     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+    <!--请求头转换-->
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
     <title>惠车联动</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css?version=1.1.1">
+    <link rel="stylesheet" href="css/animate.min.css">
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/font-s.js"></script>
 </head>
 <body>
-<div class="loading">
-    <span></span>
-</div>
+    <div class="loading">
+        <span></span>
+    </div>
     <section id="main" class="sty2">
         <div class="appWarp">
-            <img class="logo" src="img/logo.png" alt="">
-            <img class="top-banner" width="100%" src="img/top-banner.png" alt="">
+            <img class="logo animated bounceInRight" src="img/logo.png" alt="">
+            <div class="icon-leopard-warp">
+                <img class="tail-bg" src="img/tail.png" alt="">
+                <img class="icon-leopard" src="img/icon-leopard.png" alt="">
+            </div>
+            <img class="top-banner" onclick="return false;" width="100%" src="img/top-banner.png" alt="">
             <!--<img class="banner" src="img/h5-banner.jpg" width="100%" alt="">-->
+            <img class="top-banner-icon" src="img/top-banner-icon.png" alt="">
+            <img class="top-banner-icon2" src="img/top-banner-icon2.png" alt="">
+            <img class="top-banner-icon3" src="img/top-banner-icon3.png" alt="">
+            <img class="top-banner-icon4" src="img/top-banner-icon4.png" alt="">
             <ul class="brand-car-model">
                 <li id="car-model" class="ps-r">
                     <span class="brand-car-model-one"></span>
@@ -38,11 +48,11 @@
             <p class="statement">
                 <span class="fl">声明：</span>惠车联动承诺不会将客户信息泄露给任何人员和机构，仅用于贷款申请。</p>
             <p class="arrow-down-warp"><img src="img/icon-arrow-down.png" alt=""></p>
-            <img class="introduce-bg" src="img/introduce-bg.png" alt="">
+            <img class="introduce-bg" onclick="return false;" src="img/introduce-bg.png" alt="">
             <p class="arrow-down-warp"><img src="img/icon-arrow-down.png" alt=""></p>
             <div class="phone-introduce">
                 <a href="tel:400-611-7717"></a>
-                <img class="introduce-bg" src="img/introduce-bg2.png" alt="">
+                <img class="introduce-bg" onclick="return false;" src="img/introduce-bg2.png" alt="">
             </div>
             <p class="licence">本服务由惠车联动提供</p>
         </div>
@@ -233,10 +243,13 @@
                 </div>
             </div>
         </div>
-        <script src="js/public.js">
+        <script src="js/public.js" type="text/javascript">
             /*Javascript代码片段*/
         </script>
         <script>
+//            setTimeout(function () {
+//                $(".icon-leopard").addClass("bounceInRight")
+//            },1000);
             $(".brand-dl dd").click(function () {
                 $(".pop-one ").addClass("in");
                 $(this).addClass("active").siblings().removeClass("active");
@@ -334,23 +347,34 @@
     </style>
 </body>
 </html>
-<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip"></script>
-<script>
-//         $.ajax({
-//         type: "get",
-//         url: "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js",
-//         async:false,
-//         dataType:"script",
-//         cache:false,
-//         success: succFunction
-//     });
-//     function succFunction(data) {
-//         (function () {
-//             alert(remote_ip_info['city'])
-//         })()
+<!--<script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js"></script>-->
+<!--<script>-->
+<!--//    $.ajax({-->
+<!--//        type: "get",-->
+<!--//        url: "int.dpool.sina.com.cn/iplookup/iplookup.php?format=js",-->
+<!--//        async:false,-->
+<!--//        dataType:"script",-->
+<!--//        cache:false,-->
+<!--//        success: succFunction-->
+<!--//    });-->
+<!--//    function succFunction(data) {-->
+<!--//        (function () {-->
+<!--//            alert(remote_ip_info['city'])-->
+<!--//        })()-->
+<!--//-->
+<!--//    }-->
+    <!--var city = remote_ip_info['city'];-->
+    <!--$("title").html(city);-->
+    <!--alert("您当前所在城市："+city)-->
+<!--</script>-->
 
-//     }
-    var city = remote_ip_info['city'];
-    $("title").html(city);
-//     alert("您当前所在城市："+city)
-</script>
+
+<!--<script type="text/javascript">-->
+    <!--$.getScript('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip', function(_result) {-->
+        <!--if (remote_ip_info.ret == '1') {-->
+            <!--alert('国家：' + remote_ip_info.country +'\n省：' + remote_ip_info.province + '\n市：' + remote_ip_info.city + '\n区：' + remote_ip_info.district + '\nISP：' + remote_ip_info.isp + '\n类型：' + remote_ip_info.type + '\n其他：' + remote_ip_info.desc);-->
+        <!--} else {-->
+            <!--alert('没有找到匹配的IP地址信息！');-->
+        <!--}-->
+    <!--});-->
+<!--</script>-->
