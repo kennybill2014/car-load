@@ -410,6 +410,7 @@
         picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
             console.log(selectedVal);
             console.log(selectedIndex);
+            $(".select-info #sel_city").css("color","#666")
         });
         nameEl.addEventListener('click', function () {
             picker.show();
