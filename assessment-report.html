@@ -14,7 +14,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/public.js"></script>
 </head>
-<body style="background: #fff;">
+<body style="background: #f7f7f7;">
 <div class="loading">
     <span></span>
 </div>
@@ -24,7 +24,7 @@
         <span></span>
     </header>
     <section id="main">
-        <div class="appWarp">
+        <div class="appWarp" style="background: #fff;">
             <div class="assessment-report">
                 <span class="icon-assessment-report fl"></span>
                 <p class="green fz34 fw-b">信息提交成功！</p>
@@ -48,39 +48,19 @@
                         </p>
                         <span class="fz24">惠车联动可贷额度</span>
                     </div>
-
                 </div>
             </div>
             <div class="lower-box">
                 <p class="ta-l fz24 pt15 pl20">本结果仅供参考，实际金额以线下真实额度为准</p>
                 <p id="down-load" class="btn-assessment bnt-sty2">下载惠车联动APP</p>
                 <p class="fz28 mt48">下载惠车联动APP，可优先放款，在线查询贷款进度。</p>
-                <p class="fz28 c-a4a4d text-d-u mt25" onclick="window.location.href='tel:400-611-7717'">咨询热线：400-611-7717</p>
+                <p class="fz28 c-a4a4d text-d-u mt25"><a href="tel:400-611-7717" class="c-a4a4d">咨询热线：400-611-7717</a></p>
                 <p class="fz28 mt20">（工作时间：周一至周五9.00点~18.00点）</p>
             </div>
-
         </div>
     </section>
 
 </body>
-<script type="text/javascript">
-    var bbb= document.getElementById("down-load");
-    bbb.addEventListener("click",
-        function () {
-            var u = navigator.userAgent;
-            if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
-//                alert("安卓手机");
-                window.location.href = "http://zhushou.360.cn/detail/index/soft_id/3868131?recrefer=SE_D_%E6%83%A0%E8%BD%A6%E8%81%94%E5%8A%A8";
-            } else if (u.indexOf('iPhone') > -1) {//苹果手机
-                window.location.href = "https://itunes.apple.com/cn/app/%E6%83%A0%E8%BD%A6%E8%81%94%E5%8A%A8/id1255058049?mt=8";
-//                alert("苹果手机");
-            } else if (u.indexOf('Windows Phone') > -1) {//winphone手机
-//                alert("winphone手机");
-                window.location.href = "http://zhushou.360.cn/detail/index/soft_id/3868131?recrefer=SE_D_%E6%83%A0%E8%BD%A6%E8%81%94%E5%8A%A8";
-            }
-        }
-    )
-</script>
 <!--百度统计-->
 <script>
     var _hmt = _hmt || [];

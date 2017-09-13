@@ -43,22 +43,72 @@ $(document).ready(function(e) {
     }
     //动画
     $(function(){
-//                    $('.top-banner-icon4').addClass('animated bounce');
         setTimeout(function(){
-            $('.top-banner-icon').addClass('animated bounceInLeft');
-            $('.top-banner-icon').css("opacity","1")
-        }, 2000);
-        setTimeout(function(){
-            $('.top-banner-icon2').addClass('animated bounceInDown');
-            $('.top-banner-icon2').css("opacity","1")
-        }, 2500);
-        setTimeout(function(){
-            $('.top-banner-icon3').addClass('animated bounceInRight');
-            $('.top-banner-icon3').css("opacity","1")
-        }, 3000);
-        setTimeout(function(){
-            $('.top-banner-icon4').addClass('animated bounceInUp');
-            $('.top-banner-icon4').css("opacity","1")
-        }, 3500);
+            $('.icon-leopard-warp').addClass('animated bounceInLeft');
+            $('.icon-leopard-warp').css("opacity","1")
+        }, 0);
+        // setTimeout(function(){
+        //     $('.top-banner-icon').addClass('animated bounceInLeft');
+        //     $('.top-banner-icon').css("opacity","1")
+        // }, 2000);
+        // setTimeout(function(){
+        //     $('.top-banner-icon2').addClass('animated bounceInDown');
+        //     $('.top-banner-icon2').css("opacity","1")
+        // }, 2500);
+        // setTimeout(function(){
+        //     $('.top-banner-icon3').addClass('animated bounceInRight');
+        //     $('.top-banner-icon3').css("opacity","1")
+        // }, 3000);
+        // setTimeout(function(){
+        //     $('.top-banner-icon4').addClass('animated bounceInUp');
+        //     $('.top-banner-icon4').css("opacity","1")
+        // }, 3500);
     });
+
+    function phoneType() {
+        var u = navigator.userAgent;
+        if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+//                alert("安卓手机");
+            window.location.href = "http://zhushou.360.cn/detail/index/soft_id/3867306?recrefer=SE_D_%E6%83%A0%E8%BD%A6%E8%81%94%E5%8A%A8";
+        } else if (u.indexOf('iPhone') > -1) {//苹果手机
+            window.location.href = "https://itunes.apple.com/cn/app/%E6%83%A0%E8%BD%A6%E8%81%94%E5%8A%A8/id1255058049?mt=8";
+//                alert("苹果手机");
+        } else if (u.indexOf('Windows Phone') > -1) {//winphone手机
+//                alert("winphone手机");
+            window.location.href = "http://zhushou.360.cn/detail/index/soft_id/3867306?recrefer=SE_D_%E6%83%A0%E8%BD%A6%E8%81%94%E5%8A%A8";
+        }
+    }
+    $("#red_btn_load").on("click",function () {
+        phoneType()
+    });
+    $("#btn-down").on("click",function () {
+        phoneType()
+    });
+    $("#btn-down-2").on("click",function () {
+        phoneType()
+    });
+    $("#download-btn").on("click",function () {
+        phoneType()
+    });
+    $("#down-load").on("click",function () {
+        phoneType()
+    });
+    function popAlert() {
+        $(".pop").css("display","block");
+        $(".pop").on("click",".pop-btn-close",function () {
+            $(".pop").css("display","none")
+        });
+        $(".shade").on("click",function () {
+            $(".pop").css("display","none")
+        });
+    }
+    $("#btn-receive").on("click",function () {
+        popAlert()
+    });
+    $("#red-packet-rule").on("click",function () {
+//        var pageTop = $(document).scrollTop();
+//        pageTop = 617;
+        $("html,body").animate({scrollTop:$("#red_btn_load").offset().top},500);
+    })
+
 });
